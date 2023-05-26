@@ -1,12 +1,9 @@
 <template>
-    <v-card>
+  <v-col cols = "2">
       <v-layout>
         <v-navigation-drawer
-          image="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-          permanent
-          theme="dark"
+        color = #385F73
         >
-        <h2>Dashboard</h2>
           <v-list nav>
             <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
             <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors" value="supervisors"></v-list-item>
@@ -15,5 +12,6 @@
         </v-navigation-drawer>
        
       </v-layout>
-    </v-card>
+   
+  </v-col>
   </template>
