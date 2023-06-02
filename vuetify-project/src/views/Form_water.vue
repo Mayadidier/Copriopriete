@@ -14,7 +14,7 @@
       </v-col>
     </v-row>
 
-    <v-row no-gutters v-for="article in listeDecourses">
+    <v-row no-gutters v-for="article in releveEau">
       <v-col cols="2" offset="2" class="mt-2">
         <p class="text-center align-center pa-4">{{ article }}</p>
       </v-col>
@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      listeDecourses: [
+      releveEau: [
         "Compteur principal",
         " Compteur lot 2/3",
         "Compteur lot 2",
