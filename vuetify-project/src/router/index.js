@@ -10,7 +10,22 @@ const routes = [
     {
   path: '/WaterForm',
   name: 'waterForm',
-  component: () => import(/* webpackChunkName: "home" */ '@/views/Form_water.vue'),
+  component: () => import(/* webpackChunkName: "home" */ '@/views/WaterForm.vue'),
+},
+{
+  path: '/GasForm',
+  name: 'gasForm',
+  component: () => import(/* webpackChunkName: "home" */ '@/views/GasForm.vue'),
+},
+{
+  path: '/WaterBill',
+  name: 'waterBill',
+  component: () => import(/* webpackChunkName: "home" */ '@/views/WaterBill.vue'),
+},
+{
+  path: '/GasBill',
+  name: 'gasBill',
+  component: () => import(/* webpackChunkName: "home" */ '@/views/GasBill.vue'),
 },
 ]
 

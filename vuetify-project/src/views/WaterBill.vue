@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-    <Menu />
     <v-col cols="10" offset="2">
       <v-row no-gutters class="align-center justify-center">
         <h1>Facture Gaz</h1>
@@ -11,6 +10,7 @@
       <v-card class="mx-auto px-6 py-8" max-width="600">
         <v-form v-model="form" @submit="checkForm" method="post">
           <v-col cols=" mx-auto">
+            Voir pour date
             <v-text-field type="date" label="Date"></v-text-field>
 
             <v-text-field
