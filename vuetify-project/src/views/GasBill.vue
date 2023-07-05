@@ -79,7 +79,6 @@ import Menu from "../components/Menu/Menu.vue";
 export default {
   data() {
     return {
-      releves: ["Montant HT", "Abonnement", "Contribution", "Taxe"],
       rules: {
         required: (value) => !!value || "Champs manquant",
         number: (value) => !isNaN(value) || "Veuillez rentrer un nombre",

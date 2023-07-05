@@ -1,49 +1,74 @@
 <template>
   <v-container fluid>
-    <v-row no-gutters>
-      <v-col offset="2">
-        <v-card class="align-center pa-4 mt-n3 outlined">
-          <h2>Relevés eau</h2>
-        </v-card>
-      </v-col>
-    </v-row>
+    <Menu />
+    <v-col cols="10" offset="2">
+      <v-row no-gutters class="align-center justify-center">
+        <h1>Relevé Gaz</h1>
+      </v-row>
+    </v-col>
 
-    <v-row>
-      <v-col cols="2" offset="2" class="mt-2">
-        <v-text-field type="date" label="Date"></v-text-field>
-      </v-col>
-    </v-row>
+    <v-col offset="3" cols="8">
+      <v-card class="mx-auto px-6 py-8" max-width="600">
+        <v-form v-model="form" @submit="checkForm" method="post">
+          <v-col cols=" mx-auto">
+            <v-text-field type="date" label="Date"></v-text-field>
 
-    <v-row no-gutters v-for="article in releveEau">
-      <v-col cols="2" offset="2" class="mt-2">
-        <p class="text-center align-center pa-4">{{ article }}</p>
-      </v-col>
+            <v-text-field
+              v-model="Lot1"
+              :readonly="loading"
+              variant="solo"
+              suffix="m3"
+              clearable
+              class="mb-2"
+              label="Lot n°1"
+            ></v-text-field>
 
-      <v-col cols="1" offset="0" class="mt-2">
-        <v-text-field variant="solo" suffix="m3"></v-text-field>
-      </v-col>
-    </v-row>
+            <v-text-field
+              v-model="Lot3"
+              :readonly="loading"
+              variant="solo"
+              suffix="m3"
+              clearable
+              class="mb-2"
+              label="Lot n°3"
+            ></v-text-field>
+
+            <br />
+
+            <v-btn
+              :disabled="!form"
+              :loading="loading"
+              block
+              color="success"
+              type="submit"
+              value="Submit"
+              variant="elevated"
+            >
+              Valider
+            </v-btn>
+          </v-col>
+        </v-form>
+      </v-card>
+    </v-col>
   </v-container>
 </template>
 
 <script>
+import Menu from "../components/Menu/Menu.vue";
 // Déclaration du composant Vue
 export default {
   data() {
     return {
-      releveEau: [
-        "Compteur principal",
-        " Compteur lot 2/3",
-        "Compteur lot 2",
-        "Compteur Cour",
-      ],
+      rules: {
+        required: (value) => !!value || "Champs manquant",
+        number: (value) => !isNaN(value) || "Veuillez rentrer un nombre",
+      },
     };
   },
+  components: {
+    Menu,
+  },
 };
-</script>
-
-<script setup>
-import Date_form from "../components/Form/Form_date.vue";
 </script>
 
 <!-- Utilise le langage SCSS https://sass-lang.com/guide -->
