@@ -1,6 +1,6 @@
 <template>
+  <Menu />
   <v-container fluid>
-    <Menu />
     <v-col cols="10" offset="2">
       <v-row no-gutters class="align-center justify-center">
         <h1>Facture Eau</h1>

@@ -1,4 +1,5 @@
 <template>
+  <Menu />
     <v-container fluid>
       <v-row no-gutters>
         <v-col offset="2">
@@ -26,24 +27,15 @@
     </v-container>
   </template>
   
-  <script>
-  // Déclaration du composant Vue
-  export default {
-    data() {
-      return {
-        releveGaz: [
-          "Compteur principal",
-          " Compteur lot 2/3",
-          "Compteur lot 2",
-          "Compteur Cour",
-        ],
-      };
-    },
-  };
-  </script>
   
-  <script setup>
-  import Date_form from "../components/Form/Form_date.vue";
+  <script>
+  import Menu from "../components/Menu/Menu.vue";
+
+  export default{
+    components:{
+      Menu
+    }
+  }
   </script>
   
   <!-- Utilise le langage SCSS https://sass-lang.com/guide -->
