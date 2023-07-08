@@ -3,6 +3,10 @@
   <router-view />
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
+<style>
+#app {
+  background-color: #f8f9f9;
+}
+</style>
