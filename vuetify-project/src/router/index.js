@@ -8,6 +8,11 @@ const routes = [
       component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
     },
     {
+      path: '/HomeForm',
+      name: 'homeForm',
+      component: () => import(/* webpackChunkName: "home" */ '@/views/WaterForm.vue'),
+    },
+    {
   path: '/WaterForm',
   name: 'waterForm',
   component: () => import(/* webpackChunkName: "home" */ '@/views/WaterForm.vue'),
@@ -16,6 +21,11 @@ const routes = [
   path: '/GasForm',
   name: 'gasForm',
   component: () => import(/* webpackChunkName: "home" */ '@/views/GasForm.vue'),
+},
+{
+  path: '/HomeBill',
+  name: 'homeBill',
+  component: () => import(/* webpackChunkName: "home" */ '@/views/WaterForm.vue'),
 },
 {
   path: '/WaterBill',

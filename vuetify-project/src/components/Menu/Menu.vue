@@ -8,11 +8,11 @@
             title="Tableau de bord"
             to="/"
           ></v-list-item>
-          
+
           <v-list-item
             prepend-icon="mdi-inbox-arrow-down"
             title="Relevés"
-            to="/"
+            to="/HomeForm"
           >
             <v-list-item
               v-for="item in underTabsForm"
@@ -26,7 +26,7 @@
           <v-list-item
             prepend-icon="mdi-inbox-arrow-down"
             title="Factures"
-            to="/"
+            to="/HomeBill"
           >
             <v-list-item
               v-for="item in underTabsBill"
